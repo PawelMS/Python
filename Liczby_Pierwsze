@@ -1,0 +1,17 @@
+def liczba_pierwsza(liczba):
+    for i in range(2,liczba):
+        if liczba % i == 0:
+            return False
+    return True
+
+
+def pobiez_dane():
+    while True:
+        liczba = raw_input("Podaj swoja liczbe : ")
+        if liczba.isdigit():
+            return liczba
+def main():
+    liczba = pobiez_dane()
+    print liczba_pierwsza(int(liczba))
+
+print main()

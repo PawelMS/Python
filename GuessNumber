@@ -1,0 +1,29 @@
+import random
+
+y = random.randint(0,100)
+print(y)
+
+z=0
+
+while z<5:
+    x = input("Podaj liczbe : ")
+    z=z+1
+    k = y - x
+    print("Liczba pozostalych szans jest rowna ",5-z)
+    if y!=x:
+        if k>50:
+            print("Twoja liczba jest duzo mniejsza")
+        elif k>10:
+            print("Twoja liczba jest mniejsza")
+        elif k>0:
+            print ("Twoja liczba jest troche mniejsza ")
+        elif k<0 and abs(k)>50:
+            print("Twoja liczna jest duzo wieksza")
+        elif k<0 and abs(k)>10:
+            print("Twoja liczba jest  wieksza")
+        elif k<0 and abs(k)>0:
+            print("Twoja liczba jest troche wieksza")
+    else:
+        print("Trafiles")
+    break
+print ("Skonczyly ci sie szanse")

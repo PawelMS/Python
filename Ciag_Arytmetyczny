@@ -1,0 +1,16 @@
+def enty_wyraz_ciagu(a1,r,n):
+    rownanie = a1+(n-1)*r
+    return rownanie
+
+
+
+def suma_n_poczatkowych_wyrazow_ciagu(a1,r,n):
+    wynik = [a1]
+    for i in range(2,n+1):
+        wynik.append(enty_wyraz_ciagu(a1,r,i))
+    print wynik
+    return sum(wynik)
+
+def suma_n_poczatkowych_wyraz_ciagu2(a1,r,n):
+    rownanie = (2*a1+(n-1)*r)*n
+    return rownanie 

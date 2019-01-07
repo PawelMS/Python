@@ -1,0 +1,38 @@
+
+def obwod_trojkata(a,b,c):
+    obwod = a+b+c
+    return obwod
+
+
+def pole_trojkata(a,b,c):
+    p = (a+b+c)/2
+    pole =math.sqrt(p*(p-a)*(p-b)*(p-c))
+    return pole
+
+
+def rodzaj_trojkata(a, b, c):
+    if a == b and b == c:
+        return "Trojkat jest rownoboczny"
+    elif a == b and c != a or b == c and a != b or a == c and b != a:
+        return "Trojkat rownoramienny"
+    elif a != b and b != c:
+        return "Trojkat roznoramienny"
+
+
+def rodzaj_trojkata2(a, b, c):
+        if a**2 == (b**2) + (c**2):
+           return "Trojkat prosotkatny"
+        elif a**2 > (b**2)+(c**2):
+            return "Trojkat rozwartokatny"
+        elif a**2 < (b**2)+(c**2):
+            return "Trojkat ostrokatny"
+
+
+def main():
+   x = obwod_trojkata(5,5,5)
+   y = pole_trojkata(5,5,5)
+   z = rodzaj_trojkata(5,5,5)
+   w = rodzaj_trojkata2(5,5,5)
+   return x,y,z,w
+
+print main()

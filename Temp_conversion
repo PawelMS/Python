@@ -1,0 +1,38 @@
+import random
+
+def convert_celsius_to_fahrenheit(temp):
+    fahr = temp * 1.8 + 32
+    return fahr
+
+def convert_fahrenheit_to_celsius(temp):
+    cels = (temp - 32) / 1.8
+    return cels
+
+def convert_celsius_to_kalwin(temp):
+    kelw = temp + 273.15
+    return kelw
+
+def convert_fahrenheit_to_kalwin(temp):
+    kelw = (temp + 459.67) * 5/9
+    return kelw
+
+def random_celsius(n=1):
+    celsius = []
+    for i in range(n):
+       rand_celsius = random.uniform(-50.0,50.0)
+       celsius.append(rand_celsius)
+    return celsius
+
+def save_to_file(file_name,file_content):
+    with open(file_name, "w") as f:
+        if isinstance(file_content,list):
+            for element in file_content:
+                f.write("{}\n".format(element))
+
+        else:
+            f.write(file_content)
+
+def read_file(file_name):
+    with open(file_name,"r+") as f:
+       file_content= f.read()
+    return file_content

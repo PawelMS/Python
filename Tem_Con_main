@@ -1,0 +1,14 @@
+import temps_conversion
+
+def main():
+    read_celsius = temps_conversion.read_file("celcjusz.txt")
+    splited_celsius = read_celsius.split("\n")
+    for i in range(splited_celsius.count("")):
+        splited_celsius.remove("")
+    fahrenheit = []
+    for temp in splited_celsius:
+        #print type(temp)
+        fahrenheit.append(temps_conversion.convert_celsius_to_fahrenheit(float(temp)))
+    print fahrenheit
+    temps_conversion.save_to_file("fahreheit.txt",fahrenheit)
+main()
